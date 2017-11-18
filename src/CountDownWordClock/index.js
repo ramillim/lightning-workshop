@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { CountDown } from '../CountDownClock';
 
-const CountDownWordClock = () => /* your component JSX */ null;
+const styles = {
+  clockContainer: {
+    border: '1px solid black',
+    marginBottom: '2rem',
+    padding: '2rem',
+  }
+};
+
+const WordClock = ({ hours, minutes, seconds }) => (
+  <div style={styles.clockContainer}>
+    {`${hours} hours ${minutes} minutes ${seconds} seconds`}
+  </div>
+);
+
+const CountDownWordClock = props => (
+  <CountDown
+    {...props}
+    render={({ hours, minutes, seconds }) => (
+      <WordClock hours={hours} minutes={minutes} seconds={seconds} />
+    )}
+  />
+);
 
 export default CountDownWordClock;
 

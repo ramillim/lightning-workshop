@@ -24,9 +24,9 @@ class App extends Component {
           height: '100vh',
         }}
       >
-        <Clock />
-        <CountDownClock />
-        <CountDownWordClock />
+        <Clock hours={4} minutes={2} seconds={14} />
+        <CountDownClock from={10} />
+        <CountDownWordClock from={10} />
         <ColorPicker />
         <GradientPicker />
         <CustomGradientPicker />
