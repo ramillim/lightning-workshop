@@ -26,9 +26,9 @@ class Clock extends Component {
 }
 
 Clock.propTypes = {
-  hours: PropTypes.number.required,
-  minutes: PropTypes.number.required,
-  seconds: PropTypes.number.required,
+  // hours: PropTypes.number.required,
+  // minutes: PropTypes.number.required,
+  // seconds: PropTypes.number.required,
 };
 
 const styles = {

@@ -27,8 +27,14 @@ class App extends Component {
         <Clock hours={4} minutes={2} seconds={14} />
         <CountDownClock from={10} />
         <CountDownWordClock from={10} />
-        <ColorPicker />
-        <GradientPicker />
+        <ColorPicker
+          label="Pick Color"
+          onSelect={background => this.setState({ background })}
+        />
+        <GradientPicker
+          label="Pick Gradient"
+          onSelect={background => this.setState({ background })}
+        />
         <CustomGradientPicker />
       </div>
     );
